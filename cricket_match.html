@@ -4,51 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket</title>
+    <title>Live Cricket Match</title>
     <style>
-        h1{
-            text-align: center;
-        }
-        @keyframes cricket_bat {
-            
-            100%{
-                transform: rotate(-60deg);
-                transform-origin: top right;
-                transition: transform 0.3s ease-in;
-            }
-        }
-      
-        @keyframes cricket_ball {
-            0%{
-            
-            position: relative;
-            left: 1100px;
-            transform: translate(850px, -300px) ;
-            transition: transform 0.3s ease-out 0.3s;}
-
-            100%{
-                ini
-                transform: initial-scale(100px, -100px);
-                transition: transform 0.2s;
-            }
+        .field{
+            border: 1px solid;
         }
         .bat{
             background-color: none;
+            transition: transform 0.3s ease-in 0.3s;
             height: 400px;
-            animation: cricket_bat 2s ease-in-out forwards;
-            animation-play-state: running;
         }
-        .ball{
-            animation: cricket_ball 5s ease-in-out alternate;
-            animation-play-state: running;
+        .field:hover .bat{
+                transform: rotate(-60deg);
+                transform-origin: top right;
+        }
+        .ball1{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: relative;
+            left: 1100px;
+            top: -200px;
+            visibility: visible;
+            transition: transform 0.3s ease-in, visibility 0.3s;
+        }
+        .field:hover .ball1{
+            transform: translate(-200px, 400px);
+            visibility: hidden;
+        }
+       
+        .ball2{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: relative;
+            left: 850px;
+            top: 200px;
+            visibility: visible;
+            transition: transform 0.3s ease-out 0.3s,visibility 0.31s;
+        }
+        .field:hover .ball2{
+            transform: translate(-325px, -200px) ;
+            visibility: hidden;
+        }
+        .ball3{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: relative;
+            left: 525;
+            visibility: visible;
+            transition: transform 0.3s ease-out 0.6s;
+        }
+        .field:hover .ball3{
+            transform: translate(830px, -300px) ;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the match</h1>
-    <div class="match">
-        <img class="bat" src="bat1.png" alt="">
-    </div>
-    <div><img src="ball.png" alt="" class="ball"></div>
+   <div class="field">
+       <img class="bat" src="bat1.png" alt="">
+      <div class="ball1"></div>
+      <div class="ball2">
+          <div class="ball3" ></div>
+      </div>
+    
+</div>
 </body>
 </html>
