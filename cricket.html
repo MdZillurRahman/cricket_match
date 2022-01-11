@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cricket Match</title>
+    <style>
+        .field{
+            border: 1px solid;
+        }
+        .bat{
+            background-color: none;
+            transition: transform 0.3s ease-in;
+            height: 400px;
+        }
+        .field:hover .bat{
+                transform: rotate(-60deg);
+                transform-origin: top right;
+        }
+        .ball1{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: relative;
+            left: 1100px;
+            transition: transform 0.3s ease-in;
+        }
+        .field:hover .ball1{
+            transform: translate(-575px);
+        }
+       
+        .ball3{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 25px;
+            position: relative;
+            left: 525;
+            transition: transform 0.3s ease-out 0.31s;
+        }
+        .field:hover .ball3{
+            transform: translate(830px, -300px) ;
+        }
+    </style>
+</head>
+<body>
+   <div class="field">
+       <img class="bat" src="bat1.png" alt="">
+      <div class="ball1">
+      <div class="ball3"></div>
+    </div>
+</div>
+</body>
+</html>
