@@ -25,10 +25,12 @@
             border-radius: 25px;
             position: relative;
             left: 1100px;
-            transition: transform 0.3s ease-in;
+            visibility: visible;
+            transition: transform 0.3s ease-in, visibility 0.31s;
         }
         .field:hover .ball1{
             transform: translate(-575px);
+            visibility: hidden;
         }
        
         .ball3{
@@ -38,6 +40,7 @@
             border-radius: 25px;
             position: relative;
             left: 525;
+            visibility: visible;
             transition: transform 0.3s ease-out 0.31s;
         }
         .field:hover .ball3{
